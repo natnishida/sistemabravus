@@ -14,7 +14,7 @@
       <form action="/novo-sistema-bravus/public/cadastro_prospect" method="POST">
                   {!! csrf_field() !!}
           <div class="form-group control-label">
-          <label for="inputNome">Nome Completo</label>
+          <label for="inputNome">Nome Completo x</label>
           <input type="text" class="form-control" id="inputNome" name="inputNome" placeholder="Coloque o nome completo do Prospect">
           </div>
           <div class="form-row">
