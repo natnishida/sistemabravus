@@ -28,6 +28,19 @@ public function inserirProspect(Request $r) {
   return view('cadastro_prospect');
 }
 
+$validatedData = $r->validate([
+    'inputNome'=> 'required',
+    'selectMeioDeContato' => 'required',
+    'selectTemperatura' => 'required',
+    'selectGenero' => 'required',
+    'inputTel' => 'required',
+    'inputEmail' => 'required',
+    'inputDescricaoProspect' => 'required',
+    'checkExperimental' => 'required',
+    'modalidades' => 'required',
+
+]);
+
   $novoProspect = new Prospect;
 
 
@@ -341,7 +354,7 @@ public function listaAcoes() {
       $novaacaopendente->nome_acao = "Marque se veio ou não veio";
       $novaacaopendente->status_acao = "Pendente";
       $novaacaopendente->save();
-    
+
   }
 
   $acoescrm = Acoes::All();
